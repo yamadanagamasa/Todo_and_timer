@@ -13,6 +13,7 @@
 		8CA87247260AD4C70016637D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA87245260AD4C70016637D /* Main.storyboard */; };
 		8CA87249260AD4D20016637D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CA87248260AD4D20016637D /* Assets.xcassets */; };
 		8CA8724C260AD4D20016637D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA8724A260AD4D20016637D /* LaunchScreen.storyboard */; };
+		8CA87255260ADEF10016637D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA87254260ADEF00016637D /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8CA87248260AD4D20016637D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CA8724B260AD4D20016637D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CA8724D260AD4D20016637D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CA87254260ADEF00016637D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		8CA8723E260AD4C70016637D /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				8CA87254260ADEF00016637D /* icon.png */,
 				8CA8723F260AD4C70016637D /* AppDelegate.swift */,
 				8CA87241260AD4C70016637D /* SceneDelegate.swift */,
 				8CA87243260AD4C70016637D /* ViewController.swift */,
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CA87255260ADEF10016637D /* icon.png in Resources */,
 				8CA8724C260AD4D20016637D /* LaunchScreen.storyboard in Resources */,
 				8CA87249260AD4D20016637D /* Assets.xcassets in Resources */,
 				8CA87247260AD4C70016637D /* Main.storyboard in Resources */,
