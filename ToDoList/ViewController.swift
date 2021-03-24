@@ -13,9 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     @IBAction func addBtnAction(_ sender: Any) {
-        let alertController = UIAlertController(title: "ToDoついか", message: "ToDoを入力しろや。", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "ToDo追加", message: "ToDoを入力。", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField(configurationHandler: nil)
-        let okAction = UIAlertAction(title: "追加するぞい", style: UIAlertAction.Style.default) { (acrion: UIAlertAction) in
+        let okAction = UIAlertAction(title: "ok", style: UIAlertAction.Style.default) { (acrion: UIAlertAction) in
             //OKをタップした時の処理
             if let textField = alertController.textFields?.first {
                 self.todoList.insert(textField.text!, at: 0)
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         alertController.addAction(okAction)
-        let cancelButton = UIAlertAction(title: "するかボケ", style: UIAlertAction.Style.cancel, handler: nil)
+        let cancelButton = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
         alertController.addAction(cancelButton)
         present(alertController, animated: true, completion: nil)
     }
@@ -50,4 +50,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             userDefaults.set(todoList, forKey: "todoList")
         }
     }
+    @IBOutlet weak var timerLabel: UILabel!
+    private var timer = Timer()
+    private var count = 0.0
+    @IBAction func startTimer(_ sender: Any) {
+        if !timer.isValid {
+            timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(ViewController.updateTimer), userInfo: nil, repeats: true)
+        }
+    }
+    @objc private func updateTimer() {
+        count += 0.1
+        timerLabel.text = String(format: "%.1f", count)
+    }
+    @IBAction func stopTimer(_ sender: Any) {
+        if timer.isValid {
+            timer.invalidate()
+        }
+    }
+    @IBAction func resetTimer(_ sender: Any) {
+        timer.invalidate()
+        count = 0.0
+        timerLabel.text = String(format: "%.1f", count)
+    }
+
 }
+
