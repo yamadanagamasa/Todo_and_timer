@@ -13,9 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     @IBAction func addBtnAction(_ sender: Any) {
-        let alertController = UIAlertController(title: "ToDo追加", message: "ToDoを入力してください。", preferredStyle: UIAlertController.Style.alert)
+        let alertController = UIAlertController(title: "ToDoついか", message: "ToDoを入力しろや。", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField(configurationHandler: nil)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (acrion: UIAlertAction) in
+        let okAction = UIAlertAction(title: "追加するぞい", style: UIAlertAction.Style.default) { (acrion: UIAlertAction) in
             //OKをタップした時の処理
             if let textField = alertController.textFields?.first {
                 self.todoList.insert(textField.text!, at: 0)
@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         }
         alertController.addAction(okAction)
-        let cancelButton = UIAlertAction(title: "CANCEL", style: UIAlertAction.Style.cancel, handler: nil)
+        let cancelButton = UIAlertAction(title: "するかボケ", style: UIAlertAction.Style.cancel, handler: nil)
         alertController.addAction(cancelButton)
         present(alertController, animated: true, completion: nil)
     }
